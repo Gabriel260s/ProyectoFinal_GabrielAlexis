@@ -10,12 +10,22 @@ package proyectofinalp1;
  */
 public class Tienda {
 
-    String Nombre;
-    int id, precio, cantidad;
+    private static int nextId = 1;
+    private int id;
+    private String Nombre;
+    private int precio;
+    private int cantidad;
 
-    public Tienda(String Nombre, int id, int precio, int cantidad) {
+    public Tienda(String Nombre, int precio, int cantidad) {
+        this.id = nextId++;
         this.Nombre = Nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+    }
+
+    public Tienda(int id, String nombre, int precio, int cantidad) {
         this.id = id;
+        this.Nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
     }

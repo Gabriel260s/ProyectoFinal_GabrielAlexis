@@ -11,7 +11,8 @@ package proyectofinalp1;
 public class Banco {
 
     static String Nombre = "";
-    int saldo_disponible = 100, saldo_retirar, agregar_saldo;
+    int saldo_disponible = 1000, saldo_retirar, agregar_saldo;
+  
 
     public Banco() {
 
@@ -26,10 +27,13 @@ public class Banco {
     }
 
     public int getSaldo_disponible() {
+        
+
         return saldo_disponible;
     }
 
     public void setSaldo_disponible(int saldo_disponible) {
+       
         this.saldo_disponible = saldo_disponible;
     }
 
@@ -41,6 +45,7 @@ public class Banco {
         if (saldo_retirar <= saldo_disponible) {
             saldo_disponible -= saldo_retirar;
         }
+
     }
 
     public void agregarSaldo(int agregar_saldo) {
